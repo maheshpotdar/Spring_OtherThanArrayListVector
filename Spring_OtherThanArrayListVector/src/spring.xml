@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean id="t1" class="com.mahesh.model.Person">
+		<property name="cars">
+			<util:list list-class="java.util.Vector">
+				<value>Wagnor</value>
+				<value>Tata</value>
+				<value>Nano</value>
+				<value>Maruti</value>
+				<value>Benz</value>
+			</util:list>
+		</property>
+
+		<property name="Bikes">
+			<util:set set-class="java.util.TreeSet">
+				<value>Bajaj</value>
+				<value>Honda</value>
+				<value>Suzuki</value>
+			</util:set>
+		</property>
+
+		<property name="IplCricketTeams">
+			<util:map map-class="java.util.Hashtable">
+				<entry key="CSK" value="Chennai"></entry>
+				<entry key="DC" value="Delhi"></entry>
+				<entry key="RR" value="Rajstan"></entry>
+				<entry key="MI" value="Mumbai"></entry>
+			</util:map>
+		</property>
+	</bean>
+</beans>
